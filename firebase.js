@@ -1,17 +1,24 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAuth,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged ,sendEmailVerification ,signOut,signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyC-fjy-yk6qM_sMX875toD_Cf129h13vrw",
-    authDomain: "authentication-ffe45.firebaseapp.com",
-    projectId: "authentication-ffe45",
-    storageBucket: "authentication-ffe45.firebasestorage.app",
-    messagingSenderId: "403149979094",
-    appId: "1:403149979094:web:72fdf7196333ed24a33877",
-     measurementId: "G-599HMSKZBG"
-    
+  const firebaseConfig = {
+    apiKey: "AIzaSyBXlIDhOnjlDwpe24lX4F-HohBqWKUGDjE",
+    authDomain: "authentication-c204f.firebaseapp.com",
+    projectId: "authentication-c204f",
+    storageBucket: "authentication-c204f.firebasestorage.app",
+    messagingSenderId: "121392164675",
+    appId: "1:121392164675:web:7747c157235c93d84ac9f6",
+    measurementId: "G-8W0K5RMXH3"
   };
 
+  
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  export { auth,createUserWithEmailAndPassword}
+  const provider = new GoogleAuthProvider();
+
+  
+
+  export{auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,sendEmailVerification,signOut,signInWithPopup, GoogleAuthProvider,provider } 
+
+
+  
