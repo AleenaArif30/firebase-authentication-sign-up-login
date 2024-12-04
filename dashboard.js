@@ -9,6 +9,8 @@ let signout = () => {
             setTimeout(()=>{
                 window.location.href = "./index.html"
             },3000)
+
+            history.pushState(null,null,window.location.href)
         }).catch((error) => {
             // An error happened.
             console.log(error.message)
