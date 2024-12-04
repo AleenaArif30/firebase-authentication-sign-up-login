@@ -1,4 +1,6 @@
-import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signOut, signInWithPopup, GoogleAuthProvider, provider } from "./firebase.js"
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, sendEmailVerification,  signInWithPopup, GoogleAuthProvider, provider } from "./firebase.js"
+
+
 
 
 let signup = () => {
@@ -102,6 +104,7 @@ onAuthStateChanged(auth, (user) => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         console.log(user)
+        window.location.href = "./dashboard.html"
         // ...
     } else {
         // User is signed out
@@ -111,7 +114,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
-let signout = () => {
+/*let signout = () => {
     if (auth.currentUser) {
         signOut(auth).then(() => {
             // Sign-out successful.
@@ -124,7 +127,7 @@ let signout = () => {
     }
 }
 let sign_out = document.getElementById("sign-out")
-sign_out.addEventListener('click', signout)
+sign_out.addEventListener('click', signout)*/
 
 
 let goodlesignup = () => {
